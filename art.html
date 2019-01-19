@@ -1,0 +1,305 @@
+<html>
+<head>
+  <title>Webpage Title</title>
+
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: white;
+      color: #333333;
+      -webkit-font-smoothing: antialiased;
+      font-size: 16px;
+      font-family: "Source Sans Pro", Helvetica;
+    }
+
+    img {
+      display: block;
+    }
+
+    em {
+      font-size: 12px;
+    }
+
+    #signature {
+      margin-left: 30px;
+      font-style: oblique;
+    }
+
+    a:link,
+    a:visited {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+/*      text-decoration: underline;*/
+    }
+
+    img.icon {
+      position: fixed;
+      bottom: 30;
+      right: 30;
+      width: 50px;
+    }
+
+    .icon:hover {
+      opacity:0.6;
+    }
+
+    .crop {
+      width: 660px;
+      height: 140px;
+      overflow: hidden;
+    }
+
+    .crop img {
+      width: 735px;
+      margin: -108px 0 0 -14px;
+    }
+
+    .wrapper {
+      width: 660px;
+      margin: auto;
+    }
+
+    .container {
+      width: 660px;
+      margin: auto;
+    }
+
+    .row > .column {
+      padding: 0 0px;
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column {
+      float: left;
+      width: 25%;
+    }
+
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.6;
+    }
+
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      padding-bottom: 100px;
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    .modal-content {
+      position: relative;
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+  .modal-content, #caption { 
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+      from {transform:scale(0)} 
+      to {transform:scale(1)}
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+    @media only screen and (max-width: 700px){
+      .modal-content {
+        width: 100%;
+      }
+    }
+
+    #content {
+      width: 660px;
+      margin: 0px auto 0px auto;
+    }
+
+    #content article {
+      margin-bottom: 150px;
+    }
+
+    #content h1,
+    #content h2 {
+      color: black;
+      margin-bottom: 30px;
+      font-weight: 200;
+      font-size: 48px;
+    }
+
+    #content h3 {
+      color: black;
+      border-bottom: 1px solid black;
+      text-transform: uppercase;
+      margin: 30px 0px 30px 0px;
+      font-size: 28px;
+      font-weight: 200;
+    }
+
+    #content p {
+      width: 100%;
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
+
+    #content p:first-child {
+      font-size: 18px;
+      font-style: italic;
+      letter-spacing: 2px;
+    }
+
+    #content p:first-child:first-line {
+        font-weight: bold;
+    }
+  
+    #content ul {
+        padding-left:25px
+    }
+
+    pre {
+      font-size: 10px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #ddd;
+    }
+  </style>
+</head>
+
+<body><div class="wrapper"><section id="content">
+
+<center>
+  <div class="crop">
+    <img src="banner.png" alt="Banner">
+  </div>
+</center>
+
+<div class="w3-container"></div>
+<div class="w3-bar w3-light-grey">
+  <a href="index.html" class="w3-bar-item w3-button" style="width:25%">Home</a>
+  <a href="art.html" class="w3-bar-item w3-button" style="width:25%">Art</a>
+  <a href="graphic_design.html" class="w3-bar-item w3-button" style="width:25%">Graphic Design</a>
+  <a href="about_me.html" class="w3-bar-item w3-button" style="width:25%">About Me</a>
+</div>
+<br>
+
+<a href="https://www.instagram.com/bright.a.n.d.brush/" target="_blank">
+  <img class="icon" src="insta.png" alt="insta">
+</a>
+
+<p>
+
+<div class="row">
+  <div class="column">
+    <img class="myImages" id="myImg" src="Art/photo0.jpg" alt="no strings attached" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/Lettering/photo0.JPG" alt="no strings attached" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photo1.jpg" alt="jacket" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photo2.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photo3.jpg" alt="snow" style="width:100%;">
+  </div>
+  <div class="column">
+    <img class="myImages" id="myImg" src="Art/photo4.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photo5.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/Lettering/photo1.jpg" alt="jacket" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photo6.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photo7.jpg" alt="snow" style="width:100%;">
+  </div>
+  <div class="column">
+    <img class="myImages" id="myImg" src="Art/photo8.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photo9.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photoA.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photoB.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/Lettering/photo2.jpg" alt="snow" style="width:100%;">
+  </div>
+  <div class="column">
+    <img class="myImages" id="myImg" src="Art/photoC.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photoD.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/Lettering/photo3.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photoE.jpg" alt="snow" style="width:100%;">
+    <img class="myImages" id="myImg" src="Art/photoF.jpg" alt="snow" style="width:100%;">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var images = document.getElementsByClassName('myImages');
+var modalImg = document.getElementById("img01");
+for (var i = 0; i < images.length; i++){
+  var img = images[i]
+
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+</p>
+<br><br><br>
+</section></div></body></html>
