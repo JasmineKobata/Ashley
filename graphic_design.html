@@ -78,6 +78,118 @@
       margin: auto;
     }
 
+    .row3 > .column3 {
+      padding: 10px 5px 70px 5px;
+    }
+
+    .row3:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column3 {
+      float: left;
+      width: 33%;
+    }
+
+    .row2 > .column2 {
+      padding: 10px 5px 70px 5px;
+    }
+
+    .row2:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column2 {
+      float: left;
+      width: 50%;
+    }
+
+    .row4 > .column4 {
+      padding: 10px 5px 70px 5px;
+    }
+
+    .row4:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .column4 {
+      float: left;
+      width: 25%;
+    }
+
+    #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.6;
+    }
+
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      padding-bottom: 100px;
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+    .modal-content {
+      position: relative;
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+  .modal-content, #caption { 
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @keyframes zoom {
+      from {transform:scale(0)} 
+      to {transform:scale(1)}
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+    @media only screen and (max-width: 700px){
+      .modal-content {
+        width: 100%;
+      }
+    }
+
+
     #content {
       width: 660px;
       margin: 0px auto 0px auto;
@@ -154,7 +266,88 @@
   <img class="icon" src="insta.png" alt="insta">
 </a>
 
-<p>Pictures
-</p>
+<center>
+<video controls="controls" poster="Design/instashot.png" width="500" height="340" 
+    name="instagram" src="Design/insta.mov"></video> <br><br><br>
+
+<div class="row2">
+  <div class="column2">
+    <img class="myImages" id="myImg" src="Design/photo1.png" alt="C Drop Cap" style="width:75%;">
+  </div>
+  <div class="column2">
+    <img class="myImages" id="myImg" src="Design/photo2.png" alt="W Drop Cap"" style="width:78%;">
+  </div>
+</div>
+<div class="row4">
+  <div class="column4">
+    <img class="myImages" id="myImg" src="Design/photoB.jpg" alt="snow" style="width:100%;">
+  </div>
+  <div class="column4">
+    <img class="myImages" id="myImg" src="Design/photoC.jpg" alt="snow" style="width:100%;">
+  </div>
+  <div class="column4">
+    <img class="myImages" id="myImg" src="Design/photoD.jpg" alt="snow" style="width:100%;">
+  </div>
+  <div class="column4">
+    <img class="myImages" id="myImg" src="Design/photo4.jpg" alt="snow" style="width:70%;">
+  </div>
+</div>
+<div class="row2">
+  <div class="column2">
+    <img class="myImages" id="myImg" src="Design/photo7.jpg" alt="snow" style="width:75%;">
+  </div>
+  <div class="column2">
+    <img class="myImages" id="myImg" src="Design/photo8.jpg" alt="snow" style="width:75%;">
+  </div>
+</div>
+<div class="row3">
+  <div class="column3">
+    <img class="myImages" id="myImg" src="Design/photo3.jpg" alt="snow" style="width:100%;">
+  </div>
+  <div class="column3">
+    <img class="myImages" id="myImg" src="Design/photo6.jpg" alt="snow" style="width:100%;">
+  </div>
+  <div class="column3">
+    <img class="myImages" id="myImg" src="Design/photo9.jpg" alt="snow" style="width:100%;">
+  </div>
+</div>
+<div class="row3">
+
+    <img class="myImages" id="myImg" src="Design/photo0.jpg" alt="snow" style="width:60%;">
+</div>
+</center>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var images = document.getElementsByClassName('myImages');
+var modalImg = document.getElementById("img01");
+for (var i = 0; i < images.length; i++){
+  var img = images[i]
+
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
 <br><br><br>
 </section></div></body></html>
